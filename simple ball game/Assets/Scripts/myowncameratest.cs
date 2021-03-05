@@ -9,6 +9,16 @@ public class myowncameratest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Input.GetAxisRaw("Mouse X");
+        Input.GetAxisRaw("Mouse Y");
+
+
+
+        
+        
+
+
         transform.position = player.transform.position;
     }
 }

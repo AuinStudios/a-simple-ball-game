@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - groundballgame
+  - bouncepad
   layers:
   - Default
   - TransparentFX

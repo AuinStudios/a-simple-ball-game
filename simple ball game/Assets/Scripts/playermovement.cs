@@ -48,6 +48,18 @@ public class playermovement : MonoBehaviour
             isgroundedboi = true;
         }
 
+
+
+
+
+
+
+
+        if (other.gameObject.CompareTag("bouncepad"))
+        {
+            rig.AddForce(transform.up *  20000f * Time.deltaTime, ForceMode.Impulse);
+        }
+
     }
 
 
