@@ -19,8 +19,11 @@ public class playermovement : MonoBehaviour
     
     // Start is called before the first frame update
     void Start()
-    {
-
+    {// so the i++ adds   a number and it loops again adding untll its 10 bc when the 10 isnt bigger then the i then it stops
+        for (int i = 0; i < 10; i++)
+        {
+            Debug.Log("For loop cycle:" + i);
+        }
     }
 
     // Update is called once per frame
