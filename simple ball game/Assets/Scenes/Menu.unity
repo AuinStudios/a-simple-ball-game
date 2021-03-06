@@ -2114,7 +2114,7 @@ MonoBehaviour:
   rig: {fileID: 4882307986944271805}
   player: {fileID: 1560616255}
   GFX: {fileID: 4882307986944271804}
-  jumpower: 60000
+  jumpower: 40000
   isgroundedboi: 0
 --- !u!4 &1560616255
 Transform:

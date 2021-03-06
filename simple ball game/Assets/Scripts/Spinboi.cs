@@ -10,9 +10,10 @@ public class Spinboi : MonoBehaviour
         
     }
 
+   
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 5, 0);
+        transform.Rotate(0, 0, -1);
     }
 }
