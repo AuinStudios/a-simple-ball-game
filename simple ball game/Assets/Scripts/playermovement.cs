@@ -15,6 +15,8 @@ public class playermovement : MonoBehaviour
     public float jumpower = 60000f;
     public bool isgroundedboi;
     private  float dontjump = 0f;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,15 +34,23 @@ public class playermovement : MonoBehaviour
 
 
 
+
+
     public void OnTriggerExit(Collider other2)
     {
         isgroundedboi = false;
 
-
+        
 
 
     }
+ 
 
+
+
+
+        
+    
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("groundballgame"))
@@ -48,8 +58,11 @@ public class playermovement : MonoBehaviour
             isgroundedboi = true;
         }
 
-
-
+       if (other.gameObject.CompareTag("groundspin"))
+        {
+            isgroundedboi = true;
+           
+        }
 
 
 

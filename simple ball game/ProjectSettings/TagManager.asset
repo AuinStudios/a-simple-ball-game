@@ -6,6 +6,7 @@ TagManager:
   tags:
   - groundballgame
   - bouncepad
+  - groundspin
   layers:
   - Default
   - TransparentFX
