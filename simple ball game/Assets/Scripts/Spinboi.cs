@@ -20,7 +20,7 @@ public class Spinboi : MonoBehaviour
 
         if (gameObject.CompareTag("swingingobject"))
         {
-          transform.Rotate(0, -1, 0 * Time.deltaTime);
+          transform.Rotate(0, -6, 0 * Time.deltaTime);
         }
         
     }
