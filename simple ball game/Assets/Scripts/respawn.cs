@@ -18,7 +18,7 @@ public class respawn : MonoBehaviour
         }
         if (other.gameObject.CompareTag("respawn2"))
         {
-            gameObject.transform.position = new Vector3(-232, 10, -10);
+            gameObject.transform.position = new Vector3(-232, 1, -10);
         }
     }
 // Update is called once per frame
