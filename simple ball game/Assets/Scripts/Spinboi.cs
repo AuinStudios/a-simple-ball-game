@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spinboi : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,13 @@ public class Spinboi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, -1);
+
+       
+
+        if (gameObject.CompareTag("swingingobject"))
+        {
+          transform.Rotate(0, -1, 0 * Time.deltaTime);
+        }
+        
     }
 }

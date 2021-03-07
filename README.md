@@ -18,3 +18,10 @@ ___
 ___
 ## 6/03/2021
 ### (made main menu also  trying to add A levelmaker with code with my cosin)
+
+
+
+
+___
+## 7/03/2021
+### (finished first level and  made the game playable)

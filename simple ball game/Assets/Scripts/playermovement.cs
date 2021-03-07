@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class playermovement : MonoBehaviour
 {
@@ -15,11 +17,13 @@ public class playermovement : MonoBehaviour
     public float jumpower = 60000f;
     public bool isgroundedboi;
     private  float dontjump = 0f;
+    public TextMeshPro text;
     
     
     // Start is called before the first frame update
     void Start()
     {// so the i++ adds   a number and it loops again adding untll its 10 bc when the 10 isnt bigger then the i then it stops
+        text.color = new Color(0, 0, 0, 0);
         for (int i = 0; i < 10; i++)
         {
             Debug.Log("For loop cycle:" + i);
@@ -35,7 +39,10 @@ public class playermovement : MonoBehaviour
 
     }
 
-
+    public void OnCollisionEnter(Collision collision)
+    {
+       
+    }
 
 
 
@@ -43,19 +50,26 @@ public class playermovement : MonoBehaviour
     {
         isgroundedboi = false;
 
-        
+        text.color = new Color(0, 0, 0, 0);
 
 
     }
- 
 
 
 
 
-        
-    
+  
+
     public void OnTriggerEnter(Collider other)
     {
+
+
+        if (other.gameObject.CompareTag("appeartext"))
+        {
+            text.color = new Color(0, 255, 41, 255);
+        }
+
+
         if (other.gameObject.CompareTag("groundballgame"))
         {
             isgroundedboi = true;
@@ -66,9 +80,16 @@ public class playermovement : MonoBehaviour
             isgroundedboi = true;
            
         }
+        if (other.gameObject.CompareTag("Finishedlevel"))
+        {
+            SceneManager.LoadScene("Menu");
+        }
 
-
-
+            if (other.gameObject.CompareTag("swingingobject"))
+        {
+            rig.AddForce(transform.forward * -10000f * Time.deltaTime, ForceMode.Impulse);
+            rig.AddForce(transform.up * 4000f * Time.deltaTime, ForceMode.Impulse);
+        }
 
 
         if (other.gameObject.CompareTag("bouncepad"))
