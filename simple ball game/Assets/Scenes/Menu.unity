@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 4319e1a0ef898b3499de37de7adbe0cf, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 4683b0258cbd1ca4e944cf40f0fd6166, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 477cc4148fad3449482a3bc3178594e2, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -738,8 +738,8 @@ GameObject:
   - component: {fileID: 989648276}
   - component: {fileID: 989648279}
   - component: {fileID: 989648280}
-  - component: {fileID: 989648275}
   - component: {fileID: 989648281}
+  - component: {fileID: 989648275}
   m_Layer: 0
   m_Name: map
   m_TagString: groundballgame
@@ -759,7 +759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57444c075000242ea99e263cee940de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manageVisibility: 1
+  manageVisibility: 0
 --- !u!23 &989648276
 MeshRenderer:
   m_ObjectHideFlags: 16
@@ -2283,7 +2283,7 @@ MonoBehaviour:
   rig: {fileID: 4882307986944271805}
   player: {fileID: 1560616255}
   GFX: {fileID: 4882307986944271804}
-  jumpower: 4000
+  jumpower: 5000
   isgroundedboi: 0
   text: {fileID: 146883216}
 --- !u!4 &1560616255
@@ -2481,7 +2481,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh160794
+  m_Name: pb_Mesh169498
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
