@@ -25,3 +25,9 @@ ___
 ___
 ## 7/03/2021
 ### (finished first level and  made the game playable)
+
+
+
+___
+## 8/03/2021
+### (tryed to fix main menu material not showing but theres no help or any yt vid and i spented 4 hours so im tired)
