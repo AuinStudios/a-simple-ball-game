@@ -9,6 +9,7 @@ public class playermovement : MonoBehaviour
 
     public  Rigidbody rig;
     public  Transform player;
+    public float maxspeed = 300f;
     private  float forwardspeed = 300f;
     private  float backwards = -300f;
     private  float right = 300f;
@@ -30,9 +31,16 @@ public class playermovement : MonoBehaviour
         }
     }
 
+
+    void FixedUpdate()
+    {
+       rig.velocity = Vector3.ClampMagnitude(rig.velocity, maxspeed);
+    }
     // Update is called once per frame
     void Update()
     {
+        
+
         transform.position = GFX.transform.position;
 
         pllayermovement();
