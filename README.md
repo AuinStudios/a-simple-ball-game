@@ -40,6 +40,7 @@ ___
 
 ## 9/03/2021
 ### (added max speed on the player and an  effect that plays when going to fast)
+1) FINALLY FIXED THE MAIN MENU  MATERIAL NOT SHOWING BUG YESSS
 
 
 
