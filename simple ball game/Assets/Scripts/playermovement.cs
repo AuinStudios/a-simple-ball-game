@@ -19,7 +19,7 @@ public class playermovement : MonoBehaviour
     public bool isgroundedboi;
     private  float dontjump = 0f;
     public TextMeshPro text;
-    
+    public ParticleSystem speedeffect;
     
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,22 @@ public class playermovement : MonoBehaviour
 
     void FixedUpdate()
     {
-       rig.velocity = Vector3.ClampMagnitude(rig.velocity, maxspeed);
+
+        if (rig.velocity.magnitude > maxspeed)
+        {
+
+            speedeffect.Play();
+
+         rig.velocity = Vector3.ClampMagnitude(rig.velocity, maxspeed);
+        }
+
+        if (rig.velocity.magnitude < maxspeed)
+        {
+            speedeffect.Stop();
+        }
+
+
+
     }
     // Update is called once per frame
     void Update()
@@ -116,7 +131,6 @@ public class playermovement : MonoBehaviour
 
 
         }
-
 
 
 

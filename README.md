@@ -31,3 +31,19 @@ ___
 ___
 ## 8/03/2021
 ### (tryed to fix main menu material not showing but theres no help or any yt vid and i spented 4 hours so im tired)
+
+
+
+
+
+
+
+## 9/03/2021
+### (added max speed on the player and an  effect that plays when going to fast)
+
+
+
+
+
+
+
