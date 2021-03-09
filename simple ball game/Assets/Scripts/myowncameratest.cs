@@ -6,7 +6,8 @@ public class myowncameratest : MonoBehaviour
 {
 
     public GameObject player;
-
+    public GameObject helderpos;
+    public GameObject firstheldpos;
     public void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -17,10 +18,10 @@ public class myowncameratest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Input.GetAxisRaw("Mouse X");
-        Input.GetAxisRaw("Mouse Y");
-
+if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            firstheldpos.transform.position = helderpos.transform.position;
+        }
 
 
         
