@@ -7,30 +7,49 @@ public class MOVEPOSition : MonoBehaviour
     
      public Rigidbody rig;
     public float maxspeed = 50f;
-    private float backforward = -12f;
-    private float forward = 12f;
+    private float fasterforward = 20f;
+    private float upforce = 1000f;
+    private float forward = 15f;
     private float back = -12f;
     public Transform addforcedirection;
-    public Transform addforce2nd;
     // Start is called before the first frame update
 
 
-    public void OnCollisionExit(Collision collision)
+   public void OnCollisionExit(Collision collision)
+   {
+       
+       rig.freezeRotation = false;
+       
+   }
+
+
+
+    public void OnCollisionEnter(Collision collision)
     {
-        
-        rig.freezeRotation = false;
-        rig.velocity = new Vector3 (40,0,0) * Time.deltaTime;
+
+            if ((collision.gameObject.CompareTag("mover2")))
+            {
+            rig.velocity = new Vector3(60, 0, 0) * Time.deltaTime;
+            }
+
+            if (collision.gameObject.CompareTag("Untagged"))
+            {
+            rig.velocity = new Vector3(60, 0, 0) * Time.deltaTime;
+            }
+            if (collision.gameObject.CompareTag("bouncepad"))
+            {
+            rig.AddForce(addforcedirection.up *upforce * Time.deltaTime, ForceMode.Impulse);
+            rig.AddTorque(addforcedirection.up * upforce * Time.deltaTime, ForceMode.Impulse);
+            rig.AddTorque(addforcedirection.right * upforce * Time.deltaTime , ForceMode.Impulse);
+            rig.freezeRotation = false;
+            }
     }
+
+
 
     public void OnCollisionStay(Collision collision)
     {
-            if (collision.gameObject.CompareTag("mover2"))
-            {
-            rig.AddForce(addforce2nd.right * backforward* Time.deltaTime, ForceMode.Impulse);
-
-            rig.freezeRotation = true;
-            }
-
+         
 
             if (collision.gameObject.CompareTag("mover"))
             {
@@ -42,25 +61,37 @@ public class MOVEPOSition : MonoBehaviour
 
 
             }
-            else
+            else if (collision.gameObject.CompareTag("mover2"))
             {
-            
             rig.freezeRotation = true;
             rig.AddForce(addforcedirection.forward * back* Time.deltaTime, ForceMode.Impulse);
+           
+        } 
+            else if ((collision.gameObject.CompareTag("mover3")))
+            {
+            rig.AddForce(addforcedirection.right * back * Time.deltaTime, ForceMode.Impulse);
+            
+            rig.freezeRotation = true;
             }
+            else if (collision.gameObject.CompareTag("lastmover"))
+            {
+            rig.AddForce(addforcedirection.forward * fasterforward * Time.deltaTime, ForceMode.Impulse);
+            rig.freezeRotation = true;
+            }
+
+        
+
+        
+           
     }
 
-
-    public void Update()
+    public void FixedUpdate()
     {
         if (rig.velocity.magnitude > maxspeed)
         {
           rig.velocity = Vector3.ClampMagnitude(rig.velocity, maxspeed);
         }
-
-
-
-        
     }
+  
 
 }

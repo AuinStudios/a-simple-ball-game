@@ -14,6 +14,8 @@ TagManager:
   - appeartext
   - mover
   - mover2
+  - mover3
+  - lastmover
   layers:
   - Default
   - TransparentFX
