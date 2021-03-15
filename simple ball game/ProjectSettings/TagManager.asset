@@ -12,6 +12,8 @@ TagManager:
   - respawn2
   - Finishedlevel
   - appeartext
+  - mover
+  - mover2
   layers:
   - Default
   - TransparentFX

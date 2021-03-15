@@ -6,7 +6,7 @@ using TMPro;
 
 public class playermovement : MonoBehaviour
 {
-
+    
     public  Rigidbody rig;
     public  Transform player;
     public float maxspeed = 300f;
@@ -51,6 +51,8 @@ public class playermovement : MonoBehaviour
 
 
     }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -62,9 +64,9 @@ public class playermovement : MonoBehaviour
 
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnCollisionStay(Collision collision)
     {
-       
+
     }
 
 
